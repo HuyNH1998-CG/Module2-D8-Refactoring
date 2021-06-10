@@ -1,22 +1,21 @@
 package com.codegym;
 
 public class Calculator {
-    public static final char ADDITION = '+';
-    public static final char SUBTRACTION = '-';
-    public static final char MULTIPLICATION = '*';
-    public static final char DIVISION = '/';
-
-    public static int calculate(int firstOperand, int secondOperand, char operator) {
-        switch (operator) {
-            case '+':
-                return firstOperand + secondOperand;
-            case '-':
-                return firstOperand - secondOperand;
-            case '*':
-                return firstOperand * secondOperand;
-            case '/':
-                if (secondOperand != 0)
-                    return firstOperand / secondOperand;
+final static char ADDITION = '+';
+final static char SUBTRACT = '-';
+final static char MULTIPLY = '*';
+final static char DIVISION = '/';
+    public static int calculate(int a, int b, char o) {
+        switch (o) {
+            case ADDITION:
+                return a + b;
+            case SUBTRACT:
+                return a - b;
+            case MULTIPLY:
+                return a * b;
+            case DIVISION:
+                if (b != 0)
+                    return a / b;
                 else
                     throw new RuntimeException("Can not divide by 0");
             default:
